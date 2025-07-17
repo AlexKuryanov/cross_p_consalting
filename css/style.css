@@ -1,1 +1,23 @@
 @import "fonts.css";
+
+/* Variables */
+:root {
+  /* Colors */
+  --text-title: #1a1a1a;
+  --text-main: #333333;
+  --text-light: #6f6f6f;
+  --accent-1: #0001fa;
+  --accent-2: #005001;
+  --button-text-light: #eeeeee;
+  --button-text-dark: #333333;
+
+  /* Fonts */
+  --ff-main: "Roboto Flex", Arial, sans-serif;
+
+  /* Paddings */
+  --p-xs: 0.5rem; /* 8px */
+  --p-s: 0.75rem; /* 12px */
+  --p-m: 1rem; /* 16px */
+  --p-l: 2rem; /* 32px */
+  --p-xl: 4rem; /* 64px */
+}
