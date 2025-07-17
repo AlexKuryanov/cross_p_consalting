@@ -6,10 +6,18 @@
   --text-title: #1a1a1a;
   --text-main: #333333;
   --text-light: #6f6f6f;
+  --text-placeholder: #d8d8d8;
   --accent-1: #0001fa;
   --accent-2: #005001;
+  --accent-4: #cbc000;
+  --gradient-green: #00b602;
+  --gradient-yellow: #656000;
+  --gradient-blue: #000194;
   --button-text-light: #eeeeee;
   --button-text-dark: #333333;
+  --button-disabled: #dbdbdb;
+  --border-valid: #68f468;
+  --border-invalid: #e0d966;
 
   /* Fonts */
   --ff-main: "Roboto Flex", Arial, sans-serif;
@@ -20,4 +28,10 @@
   --p-m: 1rem; /* 16px */
   --p-l: 2rem; /* 32px */
   --p-xl: 4rem; /* 64px */
+
+  /* Margins */
+  --m-xs: 0.5rem; /* 8px */
+  --m-s: 0.625rem; /* 10px */
+  --m-m: 1rem; /* 16px */
+  --m-l: 2rem; /* 32px */
 }
