@@ -270,3 +270,27 @@ img {
   backdrop-filter: blur(33.5px);
 }
 
+/* Section Book-slider */
+.book-slider {
+  padding-top: var(--p-s);
+  padding-bottom: var(--p-s);
+}
+
+.book-slider__container {
+  max-width: 100%;
+  padding-right: 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 290px;
+  height: 424px;
+}
+
