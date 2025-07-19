@@ -110,3 +110,10 @@ ul {
   text-align: center;
   cursor: pointer;
 }
+
+.section__devider {
+  width: 20.5rem;
+  margin: 0 auto;
+  border: 1px solid var(--text-placeholder);
+}
+
