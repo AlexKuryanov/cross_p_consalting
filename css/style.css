@@ -44,12 +44,18 @@
 }
 
 /* General */
+:root {
+  scroll-behavior: smooth;
+}
+
 .page__body {
+  margin: 0;
   padding: 0;
   font-family: var(--ff-main);
   font-weight: 500;
   font-size: 1rem;
   line-height: 150%;
+  letter-spacing: 0.32px;
 }
 
 .visually-hidden {
@@ -72,12 +78,15 @@
 .container {
   max-width: 360px;
   margin: 0 auto;
-  padding: var(--p-m);
+  padding-inline: var(--p-m);
 }
 
 .section__title {
   margin: 0;
   margin-bottom: var(--m-m);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 100%;
 }
 
 ul {
@@ -106,9 +115,16 @@ ul {
   padding: var(--p-m) var(--p-l);
   border: none;
   border-radius: 1rem;
+  font-weight: 600;
+  line-height: 100%;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .section__devider {
