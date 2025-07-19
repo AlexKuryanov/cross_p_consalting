@@ -195,3 +195,16 @@ img {
 .button__close {
   display: none;
 }
+
+/* Section About */
+.about {
+  padding-top: 27.875rem;
+}
+
+.about__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
