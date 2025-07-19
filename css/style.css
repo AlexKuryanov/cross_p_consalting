@@ -35,3 +35,78 @@
   --m-m: 1rem; /* 16px */
   --m-l: 2rem; /* 32px */
 }
+
+/* Debug */
+*,
+*::before,
+*::after {
+  outline: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+/* General */
+.page__body {
+  padding: 0;
+  font-family: var(--ff-main);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Added for better compatibility */
+}
+
+.section {
+  position: relative;
+  padding-top: var(--p-xl);
+  padding-bottom: var(--p-xl);
+}
+
+.container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: var(--p-m);
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: var(--m-m);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section__link {
+  margin: 0;
+  padding: 0;
+  color: var(--accent-1);
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  /* display: inline-block; */
+  margin-top: var(--m-l);
+  padding: var(--p-m) var(--p-l);
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
