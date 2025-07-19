@@ -294,3 +294,7 @@ img {
   height: 424px;
 }
 
+/* Section Review */
+.review {
+  padding-bottom: 0;
+}
