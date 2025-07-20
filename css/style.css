@@ -131,10 +131,10 @@ ul {
   backdrop-filter: blur(33.5px);
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .section__divider {
   width: 20.5rem;
@@ -210,14 +210,23 @@ img {
 
 /* Section About */
 .about {
-  padding-top: 27.875rem;
+  padding-top: 0;
+}
+
+.about__container {
+  position: relative;
 }
 
 .about__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: calc(100% + calc(var(--p-m) * 2));
+  height: auto;
+  margin-left: calc(var(--p-m) * -1);
+  margin-right: calc(var(--p-m) * -1);
+  vertical-align: bottom;
+}
+
+.section__content {
+  padding-top: var(--p-l);
 }
 
 /* Section Book */
