@@ -334,6 +334,8 @@ ul {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-height: 3.625rem;
+  margin-bottom: 1rem;
 }
 
 .feedback__initials {
@@ -344,6 +346,14 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+.feedback__position {
+  max-width: 7.5rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: normal;
 }
 
 .feedback__text {
