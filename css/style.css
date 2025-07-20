@@ -142,6 +142,11 @@ img {
   border: 1px solid var(--text-placeholder);
 }
 
+.slider__container {
+  max-width: 100%;
+  padding-right: 0;
+}
+
 /* Header */
 .page__header {
   padding-top: var(--p-m);
@@ -272,11 +277,6 @@ img {
 .book-slider {
   padding-top: var(--p-s);
   padding-bottom: var(--p-s);
-}
-
-.book-slider__container {
-  max-width: 100%;
-  padding-right: 0;
 }
 
 .swiper-wrapper {
