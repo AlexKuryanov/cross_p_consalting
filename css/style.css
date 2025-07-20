@@ -405,7 +405,12 @@ ul {
   font-weight: 600;
   line-height: 100%; /* 16px */
   color: var(--text-main);
+  list-style: none;
   cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 .accordion__button::after {
