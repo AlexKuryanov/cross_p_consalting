@@ -476,3 +476,49 @@ details[open] .accordion__button::after {
       rgba(252, 252, 255, 0) 100%
     );
 }
+
+/* Section Services */
+.section__heading {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.hgroup__image-wrapper {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+}
+
+.section__heading_image {
+  display: block;
+  /* max-width: 6.25rem; */
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.order__input,
+.order__message {
+  width: 100%;
+  padding: var(--p-xs) var(--p-xs);
+  border: 1px solid var(--text-placeholder);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: var(--button-disabled);
+}
+
+.section__button_service {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--button-disabled);
+  background: var(--button-disabled);
+}
