@@ -522,3 +522,22 @@ details[open] .accordion__button::after {
   border: 1px solid var(--button-disabled);
   background: var(--button-disabled);
 }
+
+/* Section Courses */
+.courses {
+  padding-bottom: var(--p-l);
+}
+
+.courses__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--p-l);
+}
+
+.construction_image {
+  display: block;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 0 auto;
+}
