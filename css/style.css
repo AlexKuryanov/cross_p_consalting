@@ -307,7 +307,12 @@ ul {
 .swiper-slide {
   flex: 0 0 auto;
   width: 18.125rem;
-  height: 26.5rem;
+  height: 100%;
+  border: 1px solid var(--button-disabled);
+}
+
+.swiper-slide img {
+  vertical-align: bottom;
 }
 
 /* Section Review */
