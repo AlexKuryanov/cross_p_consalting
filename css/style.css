@@ -525,6 +525,11 @@ details[open] .accordion__button::after {
   background: var(--button-disabled);
 }
 
+.section__button_service:disabled {
+  border: none;
+  box-shadow: none;
+}
+
 /* Section Courses */
 .courses {
   padding-bottom: var(--p-l);
