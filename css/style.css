@@ -407,9 +407,10 @@ ul {
   color: var(--text-main);
   list-style: none;
   cursor: pointer;
+  border-top: 1px solid var(--button-disabled);
 }
 
-summary::-webkit-details-marker {
+.accordion__button::-webkit-details-marker {
   display: none;
 }
 
