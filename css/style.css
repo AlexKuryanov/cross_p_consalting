@@ -78,7 +78,7 @@
 }
 
 .container {
-  max-width: 360px;
+  max-width: 22.5rem;
   margin: 0 auto;
   padding-inline: var(--p-m);
 }
@@ -172,7 +172,7 @@ ul {
   display: none;
   flex-wrap: wrap;
   flex-direction: column;
-  max-height: 145px;
+  max-height: 9.0625rem;
 }
 
 .nav__item {
@@ -298,8 +298,8 @@ ul {
 
 .swiper-slide {
   flex: 0 0 auto;
-  width: 290px;
-  height: 424px;
+  width: 18.125rem;
+  height: 26.5rem;
 }
 
 /* Section Review */
@@ -318,9 +318,9 @@ ul {
 .feedback__item {
   flex-grow: 0;
   flex-shrink: 0;
-  width: calc(17.5rem - 32px);
+  width: calc(17.5rem - 2rem);
   padding: var(--p-m);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border: 1px solid var(--text-placeholder);
 }
 
@@ -340,8 +340,8 @@ ul {
 }
 
 .feedback__initials {
-  width: 46px;
-  height: 46px;
+  width: 2.875rem;
+  height: 2.875rem;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -353,7 +353,7 @@ ul {
   max-width: 7.5rem;
   margin: 0;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: normal;
 }
 
@@ -363,7 +363,7 @@ ul {
 
 .section__button_review {
   color: var(--button-text-dark);
-  border-radius: 16px;
+  border-radius: 1rem;
   border: 1.2px solid rgba(203, 192, 0, 0.2);
   background: linear-gradient(
       0deg,
