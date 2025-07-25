@@ -145,7 +145,7 @@ ul {
 } */
 
 .section__divider {
-  width: calc(100% - var(--p-m) * 2);
+  width: calc(100% - (var(--p-m) * 2));
   margin: 0 auto;
   border: 1px solid var(--text-placeholder);
 }
@@ -226,7 +226,7 @@ ul {
 }
 
 .about__img {
-  width: calc(100% + calc(var(--p-m) * 2));
+  width: calc(100% + var(--p-m) * 2);
   height: auto;
   margin-left: calc(var(--p-m) * -1);
   margin-right: calc(var(--p-m) * -1);
