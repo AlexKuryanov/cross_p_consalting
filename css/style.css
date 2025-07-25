@@ -60,6 +60,7 @@
   line-height: 150%;
   color: var(--text-main);
   letter-spacing: 0.32px;
+  text-align: justify;
   text-wrap: pretty;
 }
 
