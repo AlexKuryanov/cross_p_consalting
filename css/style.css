@@ -181,6 +181,7 @@ ul {
   flex-wrap: wrap;
   flex-direction: column;
   max-height: 9.0625rem;
+  column-gap: 1.5rem;
 }
 
 .nav__item {
@@ -189,6 +190,10 @@ ul {
 
 .nav__link {
   padding-block: var(--p-xxs);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-title);
+  text-decoration: none;
 }
 
 .nav__item.active .nav__link {
@@ -624,4 +629,77 @@ details[open] .accordion__button::after {
   color: var(--text-white);
   font-size: 0.875rem;
   letter-spacing: 0.28px;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  /* General */
+  .page__body {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+  }
+
+  .container {
+    max-width: 1440px;
+    padding-inline: var(--p-r);
+  }
+
+  .section__title {
+    display: none;
+  }
+
+  /* :is(
+      .section__paragraph:first-of-type,
+      .section__paragraph:nth-last-of-type(1)
+    ) {
+    margin: 0;
+  } */
+  .section__paragraph {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  .section__paragraph:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* Header */
+  .page__header {
+    padding-block: 1.5rem;
+  }
+
+  .page__nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .logo__text {
+    display: none;
+  }
+
+  .logo__image {
+    display: block;
+    width: 16.5625rem;
+    height: 6.5625rem;
+    margin-right: 7.6875rem;
+  }
+
+  .nav__menu {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-bottom: var(--m-xs);
+    line-height: 100%;
+  }
+
+  .nav__link {
+    letter-spacing: 0.025rem;
+  }
+
+  .buttons-wrapper {
+    display: none;
+  }
+
 }
