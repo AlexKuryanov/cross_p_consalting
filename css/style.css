@@ -29,15 +29,21 @@
   --p-xs: 0.5rem; /* 8px */
   --p-s: 0.75rem; /* 12px */
   --p-m: 1rem; /* 16px */
+  --p-r: 1.5rem; /* 24px */
   --p-l: 2rem; /* 32px */
+  --p-2l: 3rem; /* 48px */
   --p-xl: 4rem; /* 64px */
+  --p-xxl: 5rem; /* 80px */
 
   /* Margins */
   --m-xs: 0.5rem; /* 8px */
   --m-s: 0.625rem; /* 10px */
   --m-r: 0.75rem; /* 12px */
   --m-m: 1rem; /* 16px */
-  --m-l: 2rem; /* 32px */
+  --m-l: 1.5rem; /* 24px */
+  --m-2l: 2rem; /* 32px */
+  --m-xl: 3rem; /* 48px */
+  --m-xxl: 4rem; /* 64px */
 
   /* Other root-level rules */
   scroll-behavior: smooth;
