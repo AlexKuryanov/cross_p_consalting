@@ -814,4 +814,24 @@ details[open] .accordion__button::after {
   .book-slider {
     display: none;
   }
+
+  /* Section Review */
+  .review {
+    padding-bottom: var(--p-xl);
+  }
+
+  .swiper-wrapper {
+    justify-content: space-between;
+  }
+
+  .swiper-slide {
+    width: 28rem;
+    height: 100%;
+    border: none;
+  }
+
+  .review__image {
+    width: 28rem;
+    height: auto;
+  }
 }
