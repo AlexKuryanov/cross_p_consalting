@@ -702,4 +702,18 @@ details[open] .accordion__button::after {
     display: none;
   }
 
+  /* Section About */
+  .about {
+    padding-bottom: var(--p-xxl);
+  }
+
+  .about__container {
+    display: flex;
+  }
+
+  .about__img {
+    width: 600px;
+    margin: 0;
+    margin-right: 24px;
+  }
 }
