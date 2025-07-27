@@ -732,6 +732,7 @@ details[open] .accordion__button::after {
     width: 600px;
     margin: 0;
     margin-right: 24px;
+    object-fit: cover;
   }
 
   /* Section Book */
