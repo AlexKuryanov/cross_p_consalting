@@ -433,6 +433,10 @@ ul {
 }
 
 /* Section FAQs */
+.faqs__image-wrapper {
+  display: none;
+}
+
 .accordion__button {
   position: relative;
   padding-block: var(--p-xs);
@@ -890,5 +894,32 @@ details[open] .accordion__button::after {
 
   .feedback .section__button_order {
     display: inline-block;
+  }
+
+  /* Section FAQs */
+  .faqs {
+    padding-bottom: var(--p-xxl);
+  }
+
+  .faqs .section__title {
+    display: block;
+    margin-bottom: var(--m-xxl);
+  }
+
+  .faqs__wrapper {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+
+  .section__button_ask {
+    background: linear-gradient(
+      104deg,
+      var(--accent-1, #0001fa) 0%,
+      #000194 100%
+    );
+  }
+
+  .faqs__image-wrapper {
+    display: block;
   }
 }
