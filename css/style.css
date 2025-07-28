@@ -1001,6 +1001,24 @@ details[open] .accordion__button::after {
   /* Section Courses */
   .courses {
     padding-top: var(--p-xxl);
+    padding-bottom: calc(var(--p-xl) * 2);
+  }
+
+  .courses__container {
+    /* display: flex; */
+    width: 100%;
+    /* flex-direction: row-reverse; */
+    /* column-gap: 1.5rem; */
+  }
+
+  .courses__image-wrapper {
+    display: none;
+    height: 55.375rem;
+    padding-top: 3.25rem;
+  }
+
+  .courses__image {
+    vertical-align: bottom;
   }
 
   .courses .section__heading {
@@ -1023,9 +1041,10 @@ details[open] .accordion__button::after {
     color: var(--accent-1);
   }
 
-  .courses__image-wrapper {
+  .construction__image-wrapper {
     width: 33.75rem;
     height: 33.75rem;
+    padding-top: var(--p-xl);
     margin: 0 auto;
   }
 
