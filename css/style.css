@@ -1052,4 +1052,37 @@ details[open] .accordion__button::after {
     width: 33.75rem;
     height: 33.75rem;
   }
+
+  /* Footer */
+  .page__footer {
+    padding-top: var(--p-r);
+    padding-bottom: var(--p-r);
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+  }
+
+  .logo__link_footer {
+    display: none;
+  }
+
+  .link_policy {
+    grid-column: 2 / span 1;
+  }
+
+  .socials {
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    grid-column: 2 / span 1;
+    align-self: end;
+  }
 }
