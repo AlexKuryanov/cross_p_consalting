@@ -652,6 +652,18 @@ details[open] .accordion__button::after {
   letter-spacing: 0.28px;
 }
 
+/* Policy Page */
+.policy__content {
+  padding-top: var(--p-l);
+  padding-bottom: var(--p-l);
+}
+
+.policy__content .section__title {
+  display: block;
+  padding-bottom: var(--p-m);
+  border-bottom: 2px solid var(--text-title);
+}
+
 /* Media Queries */
 @media (min-width: 1200px) {
   /* General */
