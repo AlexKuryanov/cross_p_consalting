@@ -118,6 +118,7 @@ ul {
   background: none;
   text-decoration: underline;
   cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .section__button {
@@ -145,6 +146,8 @@ ul {
     0.54px 0px 1.5px 0px rgba(255, 38, 64, 0.07) inset,
     0px 0px 0.95px 0px rgba(242, 242, 255, 0.02) inset;
   backdrop-filter: blur(33.5px);
+  transition: background-image 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .section__divider {
@@ -265,7 +268,7 @@ ul {
 
 .section__button_order {
   color: var(--button-text-light);
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       var(--accent-2, #005001) 0%,
       var(--accent-2, #005001) 100%
@@ -398,7 +401,7 @@ ul {
   color: var(--button-text-dark);
   border-radius: 1rem;
   border: 1.2px solid rgba(203, 192, 0, 0.2);
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       var(--accent-4, #cbc000) 0%,
       var(--accent-4, #cbc000) 100%
@@ -483,7 +486,7 @@ details[open] .accordion__button::after {
 .section__button_ask {
   border: 1.2px solid rgba(0, 1, 250, 0.02);
   color: var(--button-text-light);
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       var(--accent-1, #0001fa) 0%,
       var(--accent-1, #0001fa) 100%
@@ -583,8 +586,9 @@ details[open] .accordion__button::after {
   padding-bottom: var(--p-xs);
   border-bottom: 1px solid var(--text-placeholder);
 }
+
 .courses__image-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding-top: var(--p-l);
@@ -684,12 +688,6 @@ details[open] .accordion__button::after {
     line-height: 130%;
   }
 
-  /* :is(
-      .section__paragraph:first-of-type,
-      .section__paragraph:nth-last-of-type(1)
-    ) {
-    margin: 0;
-  } */
   .section__paragraph {
     margin-top: 0;
     margin-bottom: 0.625rem;
@@ -709,6 +707,30 @@ details[open] .accordion__button::after {
     opacity: 0.5;
   }
 
+  .section__button {
+    display: inline-block;
+    margin-top: var(--m-xxl);
+    margin-right: var(--m-l);
+    padding: var(--p-r) var(--p-2l);
+    color: var(--button-text-light);
+    border-radius: 16px;
+
+    box-shadow: 4px 4px 4px 0 rgba(0, 80, 1, 0.25),
+      -4px -4px 4px 0 rgba(0, 0, 0, 0.25) inset,
+      4px 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
+  }
+
+  .section__button:hover,
+  .section__button:focus {
+    box-shadow: 4px 4px 4px 0 rgba(102, 103, 252, 0.25),
+      -4px -4px 4px 0 rgba(0, 0, 0, 0.25) inset,
+      4px 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
+  }
+
+  .section__button:active {
+    box-shadow: -4px -4px 4px 0 rgba(255, 255, 255, 0.25) inset,
+      4px 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+  }
 
   /* Header */
   .page__header {
@@ -833,33 +855,44 @@ details[open] .accordion__button::after {
     display: none;
   }
 
-  .section__button {
-    display: inline-block;
-    margin-top: var(--m-xxl);
-    margin-right: var(--m-l);
-    padding: var(--p-r) var(--p-2l);
-    color: var(--button-text-light);
-    border-radius: 16px;
-
-    box-shadow: 4px 4px 4px 0 rgba(0, 80, 1, 0.25),
-      -4px -4px 4px 0 rgba(0, 0, 0, 0.25) inset,
-      4px 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
-  }
-
   .section__button_order {
-    background: linear-gradient(
+    background-image: linear-gradient(
       284deg,
       var(--accent-2, #005001) 0%,
       #00b602 100%
     );
   }
 
+  .section__button_order:hover,
+  .section__button_order:focus {
+    background-image: linear-gradient(104deg, #4ce54f 0%, #158817 100%);
+  }
+
+  .section__button_order:active {
+    background-image: none;
+    background-color: var(--accent-2);
+  }
+
   .section__button_review {
-    background: linear-gradient(
+    background-image: linear-gradient(
       104deg,
       var(--accent-4, #cbc000) 0%,
       #656000 100%
     );
+  }
+
+  .section__button_review:hover,
+  .section__button_review:focus {
+    background: linear-gradient(
+      104deg,
+      var(--accent-4-light, #e0d966) 0%,
+      #7a7638 100%
+    );
+  }
+
+  .section__button_review:active {
+    background-image: none;
+    background-color: var(--accent-4);
   }
 
   .book .section__button_review {
@@ -956,11 +989,21 @@ details[open] .accordion__button::after {
   }
 
   .section__button_ask {
-    background: linear-gradient(
+    background-image: linear-gradient(
       104deg,
       var(--accent-1, #0001fa) 0%,
       #000194 100%
     );
+  }
+
+  .section__button_ask:hover,
+  .section__button_ask:focus {
+    background-image: linear-gradient(104deg, #6563ff 0%, #3d3b99 100%);
+  }
+
+  .section__button_ask:active {
+    background-image: none;
+    background-color: var(--accent-1);
   }
 
   .faqs__image-wrapper {
@@ -1107,6 +1150,16 @@ details[open] .accordion__button::after {
 
   .link_policy {
     grid-column: 2 / span 1;
+  }
+
+  .link_policy:hover,
+  .link_policy:focus {
+    color: var(--text-white);
+    opacity: 0.8;
+  }
+
+  .link_policy:active {
+    opacity: 0.5;
   }
 
   .socials {
