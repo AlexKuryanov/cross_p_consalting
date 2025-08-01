@@ -195,10 +195,7 @@ ul {
   font-size: 1.25rem;
   color: var(--text-title);
   text-decoration: none;
-}
-
-.nav__item.active .nav__link {
-  color: var(--accent-1);
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .buttons-wrapper {
@@ -690,6 +687,17 @@ details[open] .accordion__button::after {
     margin-bottom: 0;
   }
 
+  .section__link:hover,
+  .section__link:focus {
+    color: var(--accent-1);
+    opacity: 0.8;
+  }
+
+  .section__link:active {
+    opacity: 0.5;
+  }
+
+
   /* Header */
   .page__header {
     padding-block: 1.5rem;
@@ -722,6 +730,20 @@ details[open] .accordion__button::after {
 
   .nav__link {
     letter-spacing: 0.025rem;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus {
+    color: var(--accent-1);
+    opacity: 0.8;
+  }
+
+  .nav__link:active {
+    opacity: 0.5;
+  }
+
+  .nav__link.active {
+    color: var(--accent-1);
   }
 
   .buttons-wrapper {
