@@ -693,7 +693,7 @@ details[open] .accordion__button::after {
 
 /* Policy Page */
 .policy__content {
-  padding-top: var(--p-l);
+  padding-top: var(--p-xl);
   padding-bottom: var(--p-l);
 }
 
