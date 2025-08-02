@@ -236,7 +236,7 @@ ul {
 
 /* Section About */
 .about {
-  padding-top: 0;
+  padding-top: var(--p-l);
 }
 
 .about__container {
