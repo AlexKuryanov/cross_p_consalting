@@ -167,13 +167,19 @@ ul {
 
 /* Header */
 .page__header {
+  position: fixed;
+  left: 0;
+  right: 0;
   padding-top: var(--p-m);
+  background-color: var(--text-white);
+  z-index: 999;
 }
 
 .page__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo__text {
