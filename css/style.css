@@ -47,6 +47,11 @@
 
   /* Other root-level rules */
   scroll-behavior: smooth;
+  scroll-padding-top: var(--p-l);
+
+  @media (min-width: 1200px) {
+    scroll-padding-top: 0;
+  }
 }
 
 /* Debug */
