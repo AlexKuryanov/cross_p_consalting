@@ -749,6 +749,7 @@ details[open] .accordion__button::after {
   /* Header */
   .page__header {
     padding-block: 1.5rem;
+    position: relative;
   }
 
   .page__nav {
@@ -769,6 +770,7 @@ details[open] .accordion__button::after {
 
   .nav__menu {
     display: flex;
+    position: static;
   }
 
   .nav__item {
