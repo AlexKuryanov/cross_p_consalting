@@ -389,6 +389,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-white);
   border-radius: 50%;
 }
 
@@ -1090,13 +1093,6 @@ details[open] .accordion__button::after {
   .courses {
     padding-top: var(--p-xxl);
     padding-bottom: calc(var(--p-xl) * 2);
-  }
-
-  .courses__container {
-    /* display: flex; */
-    width: 100%;
-    /* flex-direction: row-reverse; */
-    /* column-gap: 1.5rem; */
   }
 
   .courses__image-wrapper {
