@@ -225,6 +225,10 @@ ul {
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+.nav__link.active {
+  color: var(--accent-1);
+}
+
 .buttons-wrapper {
   width: 1.875rem;
   height: 1.875rem;

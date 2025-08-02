@@ -20,9 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close menu on link click
   menuLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (e) {
       closeButton.style.display = "none";
       menuButton.style.display = "block";
+      menuLinks.forEach((l) => l.classList.remove("active"));
+      e.target.classList.add("active");
       mobileMenu.classList.remove("open");
     });
   });
