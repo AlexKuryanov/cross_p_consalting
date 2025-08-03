@@ -17,7 +17,6 @@ window.addEventListener("load", () => {
   function updateSliderPosition() {
     // Calculate the offset and apply it using transform for smooth animation
     const offset = (-slideWidth - 28) * currentIndex;
-    console.log(offset);
 
     track.style.transform = `translateX(${offset}px)`;
     updateButtons();
