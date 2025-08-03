@@ -69,7 +69,7 @@ function initMobileSwiper(swiperElement) {
 
 // 💡 Инициализация только при max-width: 1200px
 function setupMobileSwipers() {
-  const mediaQuery = window.matchMedia("(max-width: 1200px)");
+  const mediaQuery = window.matchMedia("(max-width: 1199px)");
   const swiperElements = document.querySelectorAll(".swiper");
   const initialized = new WeakSet();
 

@@ -969,6 +969,10 @@ details[open] .accordion__button::after {
     padding-bottom: var(--p-xl);
   }
 
+  .review .swiper {
+    overflow: visible;
+  }
+
   .swiper-wrapper {
     justify-content: space-between;
   }
@@ -982,6 +986,19 @@ details[open] .accordion__button::after {
   .review__image {
     width: 28rem;
     height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .review__swiper-slide:first-of-type:hover .review__image {
+    transform: translateX(60%) scale(1.5);
+  }
+
+  .review__swiper-slide:nth-child(2):hover .review__image {
+    transform: scale(1.5);
+  }
+
+  .review__swiper-slide:last-of-type:hover .review__image {
+    transform: translateX(-60%) scale(1.5);
   }
 
   /* Section Feedback */
