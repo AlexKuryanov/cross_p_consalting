@@ -596,8 +596,39 @@ details[open] .accordion__button::after {
   box-sizing: border-box;
 }
 
+.order__input:focus,
+.order__message:focus {
+  outline: none;
+  border-color: var(--button-disabled);
+  box-shadow: 0 0 0 2px rgba(0, 1, 250, 0.2);
+}
+
+.order__input:valid,
+.order__message:valid {
+  border-color: var(--border-valid);
+}
+
+.order__input:invalid,
+.order__message:invalid {
+  border-color: var(--border-invalid);
+}
+
 ::placeholder {
   color: var(--button-disabled);
+}
+
+output {
+  display: block;
+  text-align: right;
+  color: var(--button-disabled);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.28px;
+}
+
+.chars-amount {
+  color: var(--text-light);
 }
 
 .section__button_service {

@@ -369,24 +369,28 @@
               <p class="order__field">
                 <label class="order__label visually-hidden" for="name">Ім'я</label>
                 <input class="order__input" type="text" id="name" name="name" placeholder="Ваше ім’я і прізвище"
-                  required>
+                  minlength="5" maxlength="150" required>
               </p>
               <p class="order__field">
                 <label class="order__label visually-hidden" for="socials">Соціальні мережі
                 </label>
                 <input class="order__input" type="url" id="socials" name="socials"
-                  placeholder="Ваш профіль в Linkedin або Facebook" required>
+                  placeholder="Ваш профіль в Linkedin або Facebook"
+                  pattern="^https:\/\/(www\.)?(linkedin\.com|facebook\.com)\/[^\s]+$" required>
               </p>
               <p class="order__field">
                 <label class="order__label visually-hidden" for="email">Email</label>
-                <input class="order__input" type="email" id="email" name="email" placeholder="Ваш Е-мейл" required>
+                <input class="order__input" type="email" id="email" name="email" placeholder="Ваш Е-мейл"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
               </p>
               <p class="order__field">
                 <label class="order__label visually-hidden" for="message">Повідомлення</label>
                 <textarea class="order__message" name="message" id="message" rows="6"
-                  placeholder="Про які питання / завдачi / напрямки Ви хотіли б запитати" required></textarea>
+                  placeholder="Про які питання / завдачi / напрямки Ви хотіли б запитати" minlength="10"
+                  maxlength="1500" required></textarea>
+                <output>Залишилось <span class="chars-amount">1500</span> знаків</output>
               </p>
-              <button class="section__button section__button_service" type="submit" disabled>Замовити зустріч</button>
+              <button class="section__button section__button_service" type="submit">Замовити зустріч</button>
             </div>
           </form>
         </div>

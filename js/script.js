@@ -24,25 +24,64 @@ summaries.forEach((summary) => {
   });
 });
 
-// Form submission handling
+// Получаем все необходимые элементы
 const form = document.querySelector(".order");
 const submitBtn = form.querySelector("button[type='submit']");
+const messageInput = form.querySelector("#message");
+const maxChars = 1500;
+const charsAmount = form.querySelector(".chars-amount");
 
-// Проверка заполненности всех полей
+// Основная функция для проверки валидности всей формы
 function checkFormValidity() {
-  if (form.checkValidity()) {
-    submitBtn.disabled = false;
+  // Проверяем все поля на валидность с помощью встроенного метода checkValidity()
+  // Если форма валидна, включаем кнопку, иначе — выключаем
+  submitBtn.disabled = !form.checkValidity();
+}
+
+// Обновляем количество оставшихся символов и проверяем валидность поля
+function updateCharsAmount() {
+  const remainingChars = maxChars - messageInput.value.length;
+  charsAmount.textContent = remainingChars;
+
+  // Если символов осталось меньше 0, выводим ошибку
+  if (remainingChars < 0) {
+    charsAmount.classList.add("error");
+    // Устанавливаем кастомное сообщение об ошибке
+    messageInput.setCustomValidity(
+      "Достигнут лимит символов. Пожалуйста, сократите сообщение."
+    );
   } else {
-    submitBtn.disabled = true;
+    // Если всё в порядке, сбрасываем кастомное сообщение
+    charsAmount.classList.remove("error");
+    messageInput.setCustomValidity("");
   }
 }
 
-// Отслеживаем изменения во всех полях
-form.addEventListener("input", checkFormValidity);
+// Отслеживаем ввод в поле сообщения, чтобы обновлять счётчик
+messageInput.addEventListener("input", updateCharsAmount);
 
-// Обработка отправки
+// Отслеживаем изменения во всех полях формы, чтобы обновлять состояние кнопки
+form.addEventListener("input", () => {
+  // Вызываем обе функции, чтобы обновить счётчик и проверить общую валидность формы
+  updateCharsAmount();
+  checkFormValidity();
+});
+
+// Инициализируем состояние при загрузке страницы
+updateCharsAmount();
+checkFormValidity();
+
+// Обработчик отправки формы
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  // Самая важная часть: проверяем валидность всей формы
+  if (!form.checkValidity()) {
+    // Если форма невалидна, выводим стандартные сообщения об ошибках
+    // (это произойдет автоматически, когда браузер увидит попытку отправки)
+    // И прекращаем выполнение функции
+    return;
+  }
 
   const formData = {
     name: document.getElementById("name").value.trim(),
@@ -65,7 +104,8 @@ form.addEventListener("submit", function (e) {
     .then(() => {
       alert("Дані надіслані!");
       form.reset();
-      submitBtn.disabled = true; // снова блокируем кнопку
+      // После сброса формы нужно снова проверить её валидность
+      checkFormValidity();
     })
     .catch(() => {
       alert("Помилка під час відправлення.");
