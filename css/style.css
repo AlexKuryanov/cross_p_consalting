@@ -1028,6 +1028,8 @@ details[open] .accordion__button::after {
     height: 33rem;
     padding: var(--p-r);
     border: 1px solid var(--text-placeholder);
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .feedback__author {
