@@ -1024,7 +1024,8 @@ details[open] .accordion__button::after {
 
   .feedback__item {
     width: 18.25rem;
-    padding: var(--p-xl);
+    height: 33rem;
+    padding: var(--p-r);
     border: 1px solid var(--text-placeholder);
   }
 
