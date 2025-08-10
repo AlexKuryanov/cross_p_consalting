@@ -75,11 +75,26 @@ checkFormValidity();
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Самая важная часть: проверяем валидность всей формы
-  if (!form.checkValidity()) {
-    // Если форма невалидна, выводим стандартные сообщения об ошибках
-    // (это произойдет автоматически, когда браузер увидит попытку отправки)
-    // И прекращаем выполнение функции
+  // Вызываем стандартную браузерную проверку
+  if (!form.reportValidity()) return;
+
+  // Дополнительные строгие проверки
+  const socialsVal = document.getElementById("socials").value.trim();
+  const emailVal = document.getElementById("email").value.trim();
+
+  const socialsPattern =
+    /^https:\/\/(www\.)?(linkedin\.com|facebook\.com)\/[^\s]+$/i;
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!socialsPattern.test(socialsVal)) {
+    alert(
+      "Введіть правильне посилання на ваш профіль у LinkedIn або Facebook."
+    );
+    return;
+  }
+
+  if (!emailPattern.test(emailVal)) {
+    alert("Введіть коректний email (наприклад, name@example.com).");
     return;
   }
 
@@ -104,6 +119,7 @@ form.addEventListener("submit", function (e) {
     .then(() => {
       alert("Дані надіслані!");
       form.reset();
+      updateCharsAmount();
       // После сброса формы нужно снова проверить её валидность
       checkFormValidity();
     })
