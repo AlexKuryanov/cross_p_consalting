@@ -374,7 +374,7 @@ ul {
 
 /* Section Feedback */
 .feedback {
-  padding-bottom: 0;
+  padding-bottom: var(--p-l);
 }
 
 .feedback__list {
@@ -841,6 +841,10 @@ details[open] .accordion__button::after {
     object-fit: cover;
   }
 
+  .about__content {
+    padding-top: 0;
+  }
+
   /* Section Book */
   .book {
     padding-top: var(--p-xxl);
@@ -1017,7 +1021,8 @@ details[open] .accordion__button::after {
 
   .feedback__item {
     width: 18.25rem;
-    padding: var(--p-r);
+    padding: var(--p-xl);
+    border: 1px solid var(--text-placeholder);
   }
 
   .feedback__author {
