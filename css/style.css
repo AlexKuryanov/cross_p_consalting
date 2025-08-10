@@ -381,12 +381,14 @@ ul {
   display: flex;
   flex-wrap: nowrap;
   column-gap: 1rem;
+  align-items: stretch;
 }
 
 .feedback__item {
   flex-grow: 0;
   flex-shrink: 0;
   width: calc(17.5rem - 2rem);
+  min-height: 100%;
   padding: var(--p-m);
   border-radius: 1.25rem;
   border: 1px solid var(--text-placeholder);
