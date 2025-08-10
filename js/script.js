@@ -25,22 +25,67 @@ summaries.forEach((summary) => {
 });
 
 // Form submission handling
-document.querySelector(".order").addEventListener("submit", function (e) {
+// document.querySelector(".order").addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   const formData = {
+//     name: document.getElementById("name").value,
+//     socials: document.getElementById("socials").value,
+//     email: document.getElementById("email").value,
+//     message: document.getElementById("message").value,
+//   };
+//   // https://script.google.com/macros/s/AKfycbwL6BtB1FmalHEzl6CaNTZ8xjseC0m79b2gG737JUHXasvO9BYuvDhlD9BMtYtcw4JFwQ/exec
+
+//   fetch(
+//     "https://script.google.com/macros/s/AKfycbwL6BtB1FmalHEzl6CaNTZ8xjseC0m79b2gG737JUHXasvO9BYuvDhlD9BMtYtcw4JFwQ/exec",
+//     {
+//       method: "POST",
+//       mode: "no-cors", // Google Script без CORS ответа
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(formData),
+//     }
+//   )
+//     .then(() => {
+//       alert("Дані надіслані!");
+//       document.querySelector(".order").reset();
+//     })
+//     .catch(() => {
+//       alert("Помилка під час відправлення.");
+//     });
+// });
+const form = document.querySelector(".order");
+const submitBtn = form.querySelector("button[type='submit']");
+
+// Проверка заполненности всех полей
+function checkFormValidity() {
+  if (form.checkValidity()) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+// Отслеживаем изменения во всех полях
+form.addEventListener("input", checkFormValidity);
+
+// Обработка отправки
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = {
-    name: document.getElementById("name").value,
-    socials: document.getElementById("socials").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
+    name: document.getElementById("name").value.trim(),
+    socials: document.getElementById("socials").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    message: document.getElementById("message").value.trim(),
   };
-  // https://script.google.com/macros/s/AKfycbwL6BtB1FmalHEzl6CaNTZ8xjseC0m79b2gG737JUHXasvO9BYuvDhlD9BMtYtcw4JFwQ/exec
 
   fetch(
     "https://script.google.com/macros/s/AKfycbwL6BtB1FmalHEzl6CaNTZ8xjseC0m79b2gG737JUHXasvO9BYuvDhlD9BMtYtcw4JFwQ/exec",
     {
       method: "POST",
-      mode: "no-cors", // Google Script без CORS ответа
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -49,7 +94,8 @@ document.querySelector(".order").addEventListener("submit", function (e) {
   )
     .then(() => {
       alert("Дані надіслані!");
-      document.querySelector(".order").reset();
+      form.reset();
+      submitBtn.disabled = true; // снова блокируем кнопку
     })
     .catch(() => {
       alert("Помилка під час відправлення.");

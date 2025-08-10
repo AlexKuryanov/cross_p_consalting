@@ -522,7 +522,8 @@ details[open] .accordion__button::after {
   color: var(--accent-3);
 }
 
-.section__button_ask {
+.section__button_ask,
+.section__button_service {
   border: 1.2px solid rgba(0, 1, 250, 0.02);
   color: var(--button-text-light);
   background-image: linear-gradient(
@@ -604,14 +605,19 @@ details[open] .accordion__button::after {
   font-family: inherit;
   font-size: inherit;
   border-radius: 1rem;
-  border: 1px solid var(--button-disabled);
-  background: var(--button-disabled);
 }
 
 .section__button_service:disabled {
   border: none;
   box-shadow: none;
+  border: 1px solid var(--button-disabled);
+  background: var(--button-disabled);
   cursor: not-allowed;
+}
+
+.section__button_service:disabled:hover {
+  background: var(--button-disabled);
+  box-shadow: none;
 }
 
 /* Section Courses */
@@ -1076,11 +1082,14 @@ details[open] .accordion__button::after {
   }
 
   .section__button_ask:hover,
-  .section__button_ask:focus {
+  .section__button_ask:focus,
+  .section__button_service:hover,
+  .section__button_service:focus {
     background-image: linear-gradient(104deg, #6563ff 0%, #3d3b99 100%);
   }
 
-  .section__button_ask:active {
+  .section__button_ask:active,
+  .section__button_service:active {
     background-image: none;
     background-color: var(--accent-1);
   }
