@@ -623,7 +623,6 @@ details[open] .accordion__button::after {
 
 .courses .section__heading {
   padding-bottom: var(--p-xs);
-  border-bottom: 1px solid var(--text-placeholder);
 }
 
 .courses__image-wrapper {
