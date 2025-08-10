@@ -22,7 +22,7 @@ function initMobileSwiper(swiperElement) {
   }
 
   function startAutoScroll() {
-    autoScrollInterval = setInterval(nextSlide, 3000);
+    autoScrollInterval = setInterval(nextSlide, 5000);
   }
 
   function stopAutoScroll() {
