@@ -1110,6 +1110,10 @@ output {
     column-gap: 1.5rem;
   }
 
+  .faqs__content {
+    width: calc(50% - 1.5rem);
+  }
+
   .section__button_ask {
     background-image: linear-gradient(
       104deg,
@@ -1133,6 +1137,15 @@ output {
 
   .faqs__image-wrapper {
     display: block;
+    width: calc(50% - 1.5rem);
+  }
+
+  .faqs__image {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /* border-radius: 1rem;
+    object-fit: cover; */
   }
 
   /* Section Services */
