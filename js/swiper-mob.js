@@ -1,5 +1,4 @@
-// Этот код будет универсален для мобильных и десктопных свайперов
-
+// Универсальная функция для инициализации свайперов с учетом адаптивности
 function initCustomSwiper(swiperElement) {
   const wrapper = swiperElement.querySelector(".swiper-wrapper");
   const slides = swiperElement.querySelectorAll(".swiper-slide");
@@ -11,21 +10,15 @@ function initCustomSwiper(swiperElement) {
   let currentX = 0;
   let isDragging = false;
   let wrapperWidth = wrapper.offsetWidth;
-  let slideWidth =
-    slides[0].offsetWidth +
-    (slides[1]
-      ? slides[1].offsetLeft - slides[0].offsetWidth - slides[0].offsetLeft
-      : 0);
+  let slideWidth = slides[0] ? slides[0].offsetWidth + 20 : 0; // 20px - gap между слайдами
 
   // Обновляем позицию слайдера
   function updateSlide() {
     wrapperWidth = wrapper.offsetWidth;
-    // Определяем максимальное смещение влево, чтобы не прокручивать пустую область
     const maxScroll = wrapper.scrollWidth - wrapperWidth;
-
     let newTransformValue = -currentIndex * slideWidth;
 
-    // Ограничиваем скролл, чтобы не уходить за пределы
+    // Ограничиваем скролл
     if (newTransformValue < -maxScroll) {
       newTransformValue = -maxScroll;
       currentIndex = Math.floor(maxScroll / slideWidth);
@@ -54,7 +47,7 @@ function initCustomSwiper(swiperElement) {
     }
   }
 
-  // Обработчики событий (универсальны для touch и mouse)
+  // Обработчики событий
   function handleStart(x) {
     startX = x;
     isDragging = true;
@@ -68,27 +61,18 @@ function initCustomSwiper(swiperElement) {
     const currentTransform = -currentIndex * slideWidth;
     const newTransformValue = currentTransform + deltaX;
 
-    // 💡 Новая логика ограничения движения
     const maxScroll = wrapper.scrollWidth - wrapperWidth;
 
-    // Если пытаемся перетянуть первый слайд вправо
+    // Эффект сопротивления на краях
     if (currentIndex === 0 && deltaX > 0) {
-      // Ограничиваем движение, делая его более "вязким"
       const resistance = 3;
       wrapper.style.transform = `translateX(${deltaX / resistance}px)`;
-      // Если пытаемся перетянуть последний слайд влево
-    } else if (
-      wrapper.scrollWidth > wrapperWidth &&
-      currentIndex === slides.length - 1 &&
-      deltaX < 0
-    ) {
-      // Ограничиваем движение с "вязким" эффектом
+    } else if (currentIndex === slides.length - 1 && deltaX < 0) {
       const resistance = 3;
       const lastSlideTransform = -maxScroll;
       wrapper.style.transform = `translateX(${
         lastSlideTransform + deltaX / resistance
       }px)`;
-      // Обычное движение слайдера
     } else {
       wrapper.style.transform = `translateX(${newTransformValue}px)`;
     }
@@ -124,9 +108,7 @@ function initCustomSwiper(swiperElement) {
   wrapper.addEventListener("mousemove", (e) => handleMove(e.clientX));
   wrapper.addEventListener("mouseup", handleEnd);
   wrapper.addEventListener("mouseleave", () => {
-    if (isDragging) {
-      handleEnd();
-    }
+    if (isDragging) handleEnd();
   });
 
   // Инициализация
@@ -134,23 +116,39 @@ function initCustomSwiper(swiperElement) {
   wrapper.style.cursor = "grab";
 }
 
-// Инициализация свайпера для всех элементов с классом ".swiper"
-function setupAllSwipers() {
-  const swiperElements = document.querySelectorAll(".swiper");
-  swiperElements.forEach((el) => initCustomSwiper(el));
+// Адаптивная инициализация слайдеров
+function initAdaptiveSliders() {
+  const isDesktop = window.innerWidth >= 1200;
+
+  // Очищаем предыдущие стили
+  document.querySelectorAll(".swiper-wrapper").forEach((wrapper) => {
+    wrapper.style.transform = "";
+  });
+
+  if (isDesktop) {
+    // На десктопе:
+    // 1. Свайпер book-slider отключается (заменяется на десктопную карусель)
+    // 2. Свайпер review отключается (анимация через CSS)
+    // 3. Свайпер feedback остается активным
+
+    const feedbackSwiper = document.querySelector("#feedback .swiper");
+    if (feedbackSwiper) {
+      initCustomSwiper(feedbackSwiper);
+    }
+  } else {
+    // На мобильных:
+    // Все три свайпера активны
+    const swiperElements = document.querySelectorAll(".swiper");
+    swiperElements.forEach((el) => initCustomSwiper(el));
+  }
 }
 
-// Вызываем инициализацию при загрузке страницы
-document.addEventListener("DOMContentLoaded", setupAllSwipers);
+// Инициализация при загрузке страницы
+document.addEventListener("DOMContentLoaded", initAdaptiveSliders);
 
-// Обновляем слайдер при изменении размера окна
+// Обновление при изменении размера окна
+let resizeTimeout;
 window.addEventListener("resize", () => {
-  const swiperElements = document.querySelectorAll(".swiper");
-  swiperElements.forEach((el) => {
-    const wrapper = el.querySelector(".swiper-wrapper");
-    if (wrapper) {
-      wrapper.style.transform = "";
-      initCustomSwiper(el);
-    }
-  });
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initAdaptiveSliders, 100);
 });
