@@ -70,7 +70,7 @@
   font-size: 1rem;
   line-height: 150%;
   color: var(--text-main);
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02rem;
   text-wrap: pretty;
 }
 
@@ -394,7 +394,7 @@ ul {
   margin: 0;
   font-size: 0.875rem;
   line-height: 150%;
-  letter-spacing: 0.28px;
+  letter-spacing: 0.0175rem;
 }
 
 .feedback__author {
@@ -618,10 +618,10 @@ output {
   display: block;
   text-align: right;
   color: var(--button-disabled);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 150%; /* 21px */
-  letter-spacing: 0.28px;
+  letter-spacing: 0.0175rem;
 }
 
 .chars-amount {
@@ -724,7 +724,7 @@ output {
   margin: 0;
   color: var(--text-white);
   font-size: 0.875rem;
-  letter-spacing: 0.28px;
+  letter-spacing: 0.0175rem;
 }
 
 /* Policy Page */
@@ -749,7 +749,7 @@ output {
   }
 
   .container {
-    max-width: 1440px;
+    max-width: 90rem;
     padding-inline: var(--p-r);
   }
 
@@ -784,7 +784,7 @@ output {
     margin-right: var(--m-l);
     padding: var(--p-r) var(--p-2l);
     color: var(--button-text-light);
-    border-radius: 16px;
+    border-radius: 1rem;
 
     box-shadow: 4px 4px 4px 0 rgba(0, 80, 1, 0.25),
       -4px -4px 4px 0 rgba(0, 0, 0, 0.25) inset,
@@ -867,9 +867,9 @@ output {
   }
 
   .about__img {
-    width: 600px;
+    width: 37.5rem;
     margin: 0;
-    margin-right: 24px;
+    margin-right: var(--p-r);
     object-fit: cover;
   }
 
@@ -1076,7 +1076,7 @@ output {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 130%; /* 31.2px */
-    letter-spacing: 0.48px;
+    letter-spacing: 0.03rem;
     color: var(--text-white);
   }
 
@@ -1089,7 +1089,7 @@ output {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%; /* 24px */
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02rem;
   }
 
   .feedback .section__button_order {
@@ -1194,7 +1194,7 @@ output {
 
   .order__input,
   .order__message {
-    padding: 10px 10px;
+    padding: 0.625rem 0.625rem;
   }
 
   .section__button_service {
