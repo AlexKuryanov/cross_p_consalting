@@ -1160,8 +1160,13 @@ output {
 
   .services__image-wrapper {
     display: block;
+    width: 50%;
     height: 55.375rem;
     padding-top: 3.25rem;
+  }
+
+  .services__content {
+    width: 50%;
   }
 
   .services .section__heading {
