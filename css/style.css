@@ -130,7 +130,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: inline-block; */
   margin-top: var(--m-l);
   padding: var(--p-m) var(--p-l);
   border: none;
