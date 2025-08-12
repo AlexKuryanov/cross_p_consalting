@@ -604,8 +604,8 @@ details[open] .accordion__button::after {
   border-color: var(--border-valid);
 }
 
-.order__input:invalid,
-.order__message:invalid {
+.order__input:focus:invalid,
+.order__message:focus:invalid {
   border-color: var(--border-invalid);
 }
 
