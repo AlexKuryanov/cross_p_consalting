@@ -92,7 +92,7 @@
 }
 
 .container {
-  max-width: 22.5rem;
+  max-width: 30rem;
   margin: 0 auto;
   padding-inline: var(--p-m);
 }
