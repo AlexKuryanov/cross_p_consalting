@@ -3,11 +3,11 @@ import "./swiper-mob.js";
 import "./desktop-slider.js";
 
 // Initialize feedback initials with different colors
-const feedbackInitials = document.querySelectorAll(".feedback__initials");
+const feedbackAvatar = document.querySelectorAll(".feedback__avatar");
 const colors = ["#4199A1", "#A1418B", "#48A141"];
 
-feedbackInitials.forEach((initial, index) => {
-  initial.style.backgroundColor = colors[index % colors.length];
+feedbackAvatar.forEach((item, index) => {
+  item.style.backgroundColor = colors[index % colors.length];
 });
 
 // Accordion functionality
