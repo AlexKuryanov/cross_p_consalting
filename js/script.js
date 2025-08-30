@@ -106,7 +106,7 @@ form.addEventListener("submit", function (e) {
   };
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbwL6BtB1FmalHEzl6CaNTZ8xjseC0m79b2gG737JUHXasvO9BYuvDhlD9BMtYtcw4JFwQ/exec",
+    "https://script.google.com/macros/s/AKfycbyxbvnHuWXnKcu8_m90VQkG4y5HmOdindYWknieyhXeqLbdpcPOAAQYxhqKAUFpJA7v/exec",
     {
       method: "POST",
       mode: "no-cors",
