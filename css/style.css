@@ -489,7 +489,7 @@ ul {
 
 .accordion__button {
   position: relative;
-  padding-block: var(--p-xs);
+  padding-block: var(--p-r);
   padding-right: 2.25rem;
   font-weight: 600;
   line-height: 100%; /* 16px */
@@ -520,6 +520,7 @@ details[open] .accordion__button::after {
 
 .accordion__text {
   margin: 0;
+  padding-bottom: var(--p-r);
   padding-inline: 1rem;
   font-weight: 500;
   line-height: 150%;
@@ -1126,9 +1127,15 @@ output {
 
   .faqs__content {
     width: calc(50% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 64px;
   }
 
   .section__button_ask {
+    align-self: flex-start;
+    margin-top: 0;
     background-image: linear-gradient(
       104deg,
       var(--accent-1, #0001fa) 0%,
