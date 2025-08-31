@@ -48,10 +48,6 @@
   /* Other root-level rules */
   scroll-behavior: smooth;
   scroll-padding-top: var(--p-l);
-
-  @media (min-width: 1200px) {
-    scroll-padding-top: 0;
-  }
 }
 
 /* Debug */
@@ -754,6 +750,10 @@ output {
 /* Media Queries */
 @media (min-width: 1200px) {
   /* General */
+  :root {
+    scroll-padding-top: 0;
+  }
+  
   .page__body {
     font-size: 1.5rem;
     font-weight: 500;
