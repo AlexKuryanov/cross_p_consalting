@@ -776,9 +776,9 @@ output {
   }
 
   .section__title {
-    display: none;
     font-size: 2.25rem;
     line-height: 130%;
+    text-align: center;
   }
 
   .section__paragraph {
