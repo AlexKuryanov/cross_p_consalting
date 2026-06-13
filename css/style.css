@@ -108,7 +108,8 @@ ul {
   margin: 0;
 }
 
-.section__link {
+.section__link:link,
+.section__link:visited {
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -119,7 +120,9 @@ ul {
   background: none;
   text-decoration: underline;
   cursor: pointer;
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .section__button {
@@ -709,7 +712,8 @@ output {
   box-sizing: border-box;
 }
 
-.link_policy {
+.link_policy:link,
+.link_policy:visited {
   color: var(--text-white);
   text-decoration: none;
 }
