@@ -59,7 +59,7 @@
         <img class="about__img" src="images/content/about_img.webp" width="360" height="414"
           alt="Фото Наталії Л. Радосавлєвич">
         <div class="about__content">
-          <h2 class="section__title">Про мене</h2>
+          <h2 class="section__title visually-hidden">Про мене</h2>
           <p class="section__paragraph">Мене звати Наталія Радосавлєвич. Я працюю у сфері фармацевтичного маркетингу та
             стратегічного розвитку фармкомпаній 20 років.</p>
           <p class="section__paragraph">
@@ -84,7 +84,7 @@
     <hr class="section__divider">
     <section class="section book" id="book">
       <div class="container book__container">
-        <h2 class="section__title">Книга</h2>
+        <h2 class="section__title visually-hidden">Книга</h2>
 
         <div class="desktop-slider">
           <button class="desktop-slider__button desktop-slider__button_prev" type="button"><span
@@ -138,10 +138,12 @@
             Така освідченість позитивно позначиться на ефективності ведення бізнесу в цілому.</p>
           <a class="section__link" href="#feedback">Ви можете прочитати відгуки інших читачів та залишити свій
             відгук.</a>
-          <a class="section__button section__button_order" href="https://forms.gle/TX8mLYX4biVAAUHM6" target="_blank"
-            rel="noopener" id="order-btn">Замовити книгу</a>
-          <a class="section__button section__button_review" href="https://forms.gle/5bSjA5JJj4wDYTgPA" target="_blank"
-            rel="noopener">Залишити відгук</a>
+          <div class="section__button-wrapper">
+            <a class="section__button section__button_order" href="https://forms.gle/TX8mLYX4biVAAUHM6" target="_blank"
+              rel="noopener" id="order-btn">Замовити книгу</a>
+            <a class="section__button section__button_review" href="https://forms.gle/5bSjA5JJj4wDYTgPA" target="_blank"
+              rel="noopener">Залишити відгук</a>
+          </div>
         </div>
       </div>
     </section>
@@ -171,9 +173,16 @@
       </div>
     </section>
     <section class="section review" id="review">
-      <div class="container slider__container">
-        <h2 class="section__title">Pецензія на книгу</h2>
-        <div class="swiper">
+      <div class="container slider__container review__container">
+        <h2 class="section__title review__title">Pецензія на книгу</h2>
+        <p class="section__paragraph review__text">Рецензент: професор <a class="section__link"
+            href="https://fm.kneu.edu.ua/ua/fm_depts/k_marketyngu/academics_kmark/Fedorchenko.A.V/" target="_blank"
+            rel="noopener"><strong>Андрій Федорченко</strong></a>, доктор
+          економічних наук,
+          завідувач кафедри маркетингу КНЕУ ім. Вадима Гетьмана, відзначає авторський підхід до формування екосистеми
+          фармбренда, практичну спрямованість книги та її цінність для фахівців, які працюють на перетині маркетингу,
+          продажів і стратегічного розвитку фармацевтичного бізнесу.</p>
+        <div class="swiper review__swiper">
           <div class="swiper-wrapper review__swiper-wrapper">
             <div class="swiper-slide review__swiper-slide">
               <img class="review__image" src="images/content/review_1.webp" width="300" height="446"
@@ -188,6 +197,34 @@
                 alt="Третя сторінка рецензії">
             </div>
           </div>
+        </div>
+        <div class="desktop-slider review__desktop-slider">
+          <button class="desktop-slider__button desktop-slider__button_prev" type="button"><span
+              class="visually-hidden">Попередня сторінка</span>
+            <img class="desktop-slider__button-image desktop-slider__button-image_prev"
+              src="images/content/desctop_slider_arrow.svg" alt="arrow prev icon">
+          </button>
+          <div class="slider-track">
+            <div class="desktop-slider__wrapper">
+              <div class="slider-slide">
+                <img class="slider-slide__image" src="images/content/review_1.webp" width="300" height="446"
+                  alt="Перша сторінка рецензії">
+              </div>
+              <div class="slider-slide">
+                <img class="slider-slide__image" src="images/content/review_2.webp" width="300" height="446"
+                  alt="Друга сторінка рецензії">
+              </div>
+              <div class="slider-slide">
+                <img class="slider-slide__image" src="images/content/review_3.webp" width="300" height="446"
+                  alt="Третя сторінка рецензії">
+              </div>
+            </div>
+          </div>
+          <button class="desktop-slider__button desktop-slider__button_next" type="button"><span
+              class="visually-hidden">Наступна сторінка</span>
+            <img class="desktop-slider__button-image desktop-slider__button-image_next"
+              src="images/content/desctop_slider_arrow.svg" alt="arrow next icon">
+          </button>
         </div>
       </div>
     </section>
